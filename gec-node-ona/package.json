@@ -1,0 +1,20 @@
+{
+  "name": "gec-node-ona",
+  "version": "1.0.0",
+  "description": "Test dashboard to interact with Ona server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bunyan": "^1.8.1",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.5",
+    "morgan": "^1.7.0",
+    "request": "^2.73.0"
+  }
+}
