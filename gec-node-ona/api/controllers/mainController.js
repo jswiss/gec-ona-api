@@ -2,11 +2,7 @@ var request = require('ajax-request');
 
 function getData(req, response){
 
-  // var start = req.params.year + '0101'
-  // var end = req.params.year + '1231'
-  var url = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + req.params.category + '&begin_date='+ start +'&end_date='+ end +'&api-key=9ede21e2158225e76cdbaf38fcaf8bda%3A14%3A73258088'
-
-  if(req.params.year && req.params.category) {
+  var url = 'https://api.ona.io/api/v1/data/135701';
 
   request({
     url: url,
@@ -38,9 +34,6 @@ function getData(req, response){
 
     response.json(jsonResponse)
   });
-} else {
-  console.log('validation error')
-}
 
 }
 
