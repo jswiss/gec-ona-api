@@ -2,7 +2,7 @@ var request = require('ajax-request');
 
 function getData(req, response){
 
-  var url = 'https://api.ona.io/api/v1/data/135701';
+  var url = 'https://api.ona.io/api/v1/data/138570';
 
   request({
     url: url,
@@ -11,31 +11,34 @@ function getData(req, response){
   }, function(err, res, body) {
 
     var data = JSON.parse(body)
-    var jsonResponse = []
-    for(i=0; i < data.response.docs.length -1; i++ ){
-      var headlineSplit = blankOutWord(data.response.docs[i].headline.main)
-      var date = data.response.docs[i].pub_date
-      date = date.split('')
-      date = date.splice(0, 10)
-      date = date.join('')
-      console.log(date)
+    var jsonResponse = [];
+    // for(i=0; i < data.response.docs.length -1; i++ ){
+    //   var headlineSplit = blankOutWord(data.response.docs[i].headline.main)
+    //   var date = data.response.docs[i].pub_date
+    //   date = date.split('')
+    //   date = date.splice(0, 10)
+    //   date = date.join('')
+    //   console.log(date)
 
-      var object = {
-        headline: [headlineSplit.headLinePart1, headlineSplit.headLinePart2],
-        blankWord: headlineSplit.blankWord,
-        blankWordCharLength: headlineSplit.blankWordLength,
-        category: req.params.category,
-        year: req.params.year,
-        date: date
-      }
+    //   var object = {
+    //     headline: [headlineSplit.headLinePart1, headlineSplit.headLinePart2],
+    //     blankWord: headlineSplit.blankWord,
+    //     blankWordCharLength: headlineSplit.blankWordLength,
+    //     category: req.params.category,
+    //     year: req.params.year,
+    //     date: date
+    //   }
 
-      jsonResponse.push(object)
-    }
-
-    response.json(jsonResponse)
+    //   jsonResponse.push(object)
+    // }
+    console.log('THIS IS DATA', data);
+    // response.json(data);
   });
 
+
 }
+
+getData();
 
 // function blankOutWord(headline){
 //   var string = headline.replace (/[.,;,?!\s,]/g, " ");
