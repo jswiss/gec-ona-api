@@ -1,12 +1,12 @@
-var express    = require('express');
-var app        = express();
-var request    = require('ajax-request');
-var bodyParser = require('body-parser');
-var bunyan     = require('bunyan');
-var mongoose   = require('mongoose');
-var logger     = require('morgan');
-var routes     = require('./config/routes');
-var port       = process.env.PORT || 1234;
+const express    = require('express');
+const app        = express();
+const request    = require('ajax-request');
+const bodyParser = require('body-parser');
+const bunyan     = require('bunyan');
+const mongoose   = require('mongoose');
+const logger     = require('morgan');
+const routes     = require('./config/routes');
+const port       = process.env.PORT || 1234;
 
 app.use(logger('dev'));
 app.use(bodyParser.json({limit: '500mb'}));
