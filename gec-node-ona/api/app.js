@@ -1,13 +1,19 @@
 const express    = require('express');
 const app        = express();
+const cors       = require('cors');
+const path       = require('path');
 const request    = require('ajax-request');
 const bodyParser = require('body-parser');
 const bunyan     = require('bunyan');
 const mongoose   = require('mongoose');
 const logger     = require('morgan');
+const configDB   = require('./config/database')
 const routes     = require('./config/routes');
 const port       = process.env.PORT || 1234;
 
+mongoose.connect(configDB.url);
+
+app.use(cors());
 app.use(logger('dev'));
 app.use(bodyParser.json({limit: '500mb'}));
 app.use(bodyParser.urlencoded({ 
