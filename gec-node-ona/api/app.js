@@ -9,9 +9,10 @@ const mongoose   = require('mongoose');
 const logger     = require('morgan');
 const configDB   = require('./config/database')
 const routes     = require('./config/routes');
+const seedDB     = require('./seed');
 const port       = process.env.PORT || 1234;
 
-mongoose.connect(configDB.url);
+mongoose.createConnection(configDB.url);
 
 app.use(cors());
 app.use(logger('dev'));

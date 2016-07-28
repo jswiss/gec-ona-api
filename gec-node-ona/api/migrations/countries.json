@@ -1,7 +1,5 @@
-//Country seed data
-
 {
-    "model": :"Country",
+    "model": "Country",
   "documents": [
     {
     "name": "Somalia",

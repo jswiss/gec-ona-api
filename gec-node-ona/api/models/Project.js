@@ -5,7 +5,7 @@ const ProjectSchema = new mongoose.Schema({
   projectNumber: {type: Number, required: true, trim: true},
   leadOrg: {type: String, required: true, trim: true},
   partnerOrgs: [{type: String, required: true, trim: true}],
-  country: {type: mongoose.Schema.ObjectID, required: true, ref: 'Country'},
+  country: {type: String, required: true, trim: true},
   assumptions: {type: String, trim: true},
   mgmtInfo: [
         {
@@ -61,7 +61,7 @@ const ProjectSchema = new mongoose.Schema({
       }]
     }]
   }],
-  timestamps: true
+  timestamps: {type: Date}
 });
 
 // ProjectSchema.pre('save', function(next) {
