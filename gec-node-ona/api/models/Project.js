@@ -6,11 +6,11 @@ const ProjectSchema = new mongoose.Schema({
   partnerOrg: [{type: String, required: true, trim: true}],
   country: {type: mongoose.Schema.ObjectID, required: true, ref: 'Country'},
   outputs: {
-    name: {type: String, required: true, trim: true},
+    desc: {type: String, required: true, trim: true},
     indicators: {
-      name: {type: String, required: true, trim: true},
+      desc: {type: String, required: true, trim: true},
       milestones: {
-        description: {type: String, required: true, trim: true},
+        desc: {type: String, required: true, trim: true},
         definition: {type: String, required: true, trim: true},
         question: {type: String, required: true, trim: true},
         targets: {
