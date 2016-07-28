@@ -1,0 +1,11 @@
+//Country seed data
+
+{
+    "model": :"Country",
+  "documents": [
+    {
+    "name": "Somalia",
+    "code": "SOM"
+    }
+  ]
+}

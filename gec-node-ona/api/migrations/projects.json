@@ -1,0 +1,11 @@
+//project seed data
+
+{
+    "model": :"Project",
+  "documents": [
+    {
+    "name": "Somalia",
+    "code": "SOM"
+    }
+  ]
+}
