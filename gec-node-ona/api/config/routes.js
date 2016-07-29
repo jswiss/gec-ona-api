@@ -1,10 +1,9 @@
-var express = require('express'),
-    router = express.Router(),
-    bodyParser = require('body-parser');
+const express       = require('express');
+const router        = express.Router();
+const bodyParser    = require('body-parser');
+const qmfController = require('../controllers/qmfController');
 
-var mainController = require('../controllers/mainController')
-
-router.route('/news/:year/:category')
-  .get(mainController.getData)
+router.route('/monitoring/:quarter')
+  .get(qmfController.getQuarter)
 
 module.exports = router;

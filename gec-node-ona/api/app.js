@@ -9,8 +9,9 @@ const mongoose   = require('mongoose');
 const logger     = require('morgan');
 const configDB   = require('./config/database')
 const routes     = require('./config/routes');
-const seedDB     = require('./seed');
-const port       = process.env.PORT || 1234;
+//seed data already sent in.
+// const seedDB     = require('./seed');
+const port       = process.env.PORT || 3000;
 
 mongoose.createConnection(configDB.url);
 
@@ -23,7 +24,7 @@ app.use(bodyParser.urlencoded({
   parameterLimit: 5000
 }));
 
-app.use(routes);
+app.use('/', routes);
 
 // error handlers
 app.use(function(req, res, next) {
