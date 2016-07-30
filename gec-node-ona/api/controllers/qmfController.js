@@ -18,24 +18,28 @@ function getQuarter(req, res){
 
       let data = JSON.parse(body)
       let jsonResponse = []
-      for(i=0; i < data.length -1; i++ ){
+  //     for(i=0; i < data.length -1; i++ ){
         
-        //clean data here
+  //       //clean data here
 
-        let object = {
-         //return only the data we want here
-        }
+  //       let object = {
+  //        //return only the data we want here
+         
+  //       }
 
-        jsonResponse.push(object)
-      }
+  //       jsonResponse.push(object)
+  //     }
 
-      response.json(jsonResponse)
-    });
+  //     response.json(jsonResponse)
+  //   });
 
-  } else {
-    console.log('validation error')
-  }
+  // } else {
+  //   console.log('validation error')
+  // }
+  console.log(data);
+})
 
+}
 }
 
 module.exports = {
