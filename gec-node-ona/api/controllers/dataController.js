@@ -11,9 +11,21 @@ const getAll = (req, res) => {
 
     res.json({projects: projects});
   });
-}
+};
+
+const getProject = (req, res) => {
+
+  let id = req.params.id;
+
+  Project.findOne({projectNumber: id}, (error, project) => {
+    if(error) res.json({message: 'Could not find project b/c:' + error});
+
+    res.json({project: project});
+  });
+};
 
 module.exports = {
   getAll: getAll,
-  getHome: getHome
+  getHome: getHome,
+  getProject: getProject
 }

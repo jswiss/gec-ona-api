@@ -16,4 +16,7 @@ router.route('/monitoring/:quarter')
 router.route('/projects')
   .get(dataController.getAll);
 
+router.route('/projects/:id')
+  .get(dataController.getProject);
+
 module.exports = router;
