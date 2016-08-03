@@ -13,13 +13,6 @@ const routes     = require('./config/routes');
 // const seedDB     = require('./seed');
 const port       = process.env.PORT || 3000;
 
-// const DB = mongoose.createConnection(configDB.url);
-
-// DB.on('error', console.error.bind(console, 'console error'));
-// DB.once('open', function() {
-//   console.log('DB is opened!');
-// });
-
 mongoose.connect(configDB.url, function(err, db) {
     if (err) {
         console.log('Unable to connect to the server. Please start the server. Error:', err);

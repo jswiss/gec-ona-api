@@ -19,4 +19,8 @@ router.route('/projects')
 router.route('/projects/:id')
   .get(dataController.getProject);
 
+router.route('/projects/:id/admin')
+  .get(dataController.getProject)
+  .post(dataController.updateProject);
+
 module.exports = router;

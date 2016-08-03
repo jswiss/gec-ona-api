@@ -24,8 +24,27 @@ const getProject = (req, res) => {
   });
 };
 
+const updateProject = (req, res) => {
+  var id = req.params.id;
+
+  Project.findById({_id: id}, (error, project) => {
+    if(error) res.json({message: 'Could not find project b/c:' + error});
+
+    //add all possible update fields here (a bitch, I know)
+    // if(req.body.author) project.author = req.body.author;
+    // if(req.body.text) project.text = req.body.text;
+
+    project.save(function(error) {
+      if(error) res.json({messsage: 'Could not update project b/c:' + error});
+
+      res.json({message: 'project successfully updated'});
+    });
+  });
+}
+
 module.exports = {
   getAll: getAll,
   getHome: getHome,
-  getProject: getProject
+  getProject: getProject,
+  updateProject: updateProject
 }
