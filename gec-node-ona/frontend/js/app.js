@@ -1,4 +1,4 @@
-angular.module("gec", [])
+angular.module('gec', ['ui.router'])
   .config(GecRouter);
 
 
@@ -11,36 +11,36 @@ function GecRouter($stateProvider, $urlRouterProvider) {
     .state('about', {
       url: '/about',
       templateUrl: '../views/about.html',
-      authenticate: false
+      // authenticate: false
     })
 
-    .state('login', {
-      url: '/login',
-      templateUrl: './views/login.html',
-      controller: "LoginController as login",
-      authenticate: false
-    })
+    // .state('login', {
+    //   url: '/login',
+    //   templateUrl: './views/login.html',
+    //   controller: "LoginController as login",
+    //   // authenticate: false
+    // })
 
     .state('main', {
       url: '/',
       templateUrl: './views/main.html',
       controller: "MainController as main",
-      authenticate: false
+      // authenticate: false
     })
 
-    .state('logout', {
-      url: '/login',
-      templateUrl: './views/login.html',
-      controller: "LogoutController as logout",
-      authenticate: false
-    })
+    // .state('logout', {
+    //   url: '/login',
+    //   templateUrl: './views/login.html',
+    //   controller: "LogoutController as logout",
+    //   // authenticate: false
+    // })
 
-    .state('profile', {
-      url: '/profile/:profileId',
-      templateUrl: './views/profile.html',
-      controller: 'ProfileController as profile',
-      authenticate: true
-    })
+    // .state('profile', {
+    //   url: '/profile/:profileId',
+    //   templateUrl: './views/profile.html',
+    //   controller: 'ProfileController as profile',
+    //   // authenticate: true
+    // })
 
     // .state('signup', {
     //   url: '/register',
@@ -53,41 +53,41 @@ function GecRouter($stateProvider, $urlRouterProvider) {
       url: '/country/:countryId',
       templateUrl: './views/country.html',
       controller: "CountryController as country",
-      authenticate: false
+      // authenticate: false
     })
 
-    .state('projects', {
-      url: '/new',
-      templateUrl: './views/projects.html',
-      controller: "ProjectsController as projects",
-      authenticate: false
-    })
+    // .state('projects', {
+    //   url: '/new',
+    //   templateUrl: './views/projects.html',
+    //   controller: "ProjectsController as projects",
+    //   // authenticate: false
+    // })
 
     .state('project', {
-      url: '/new',
+      url: '/country/:projectId',
       templateUrl: './views/project.html',
       controller: "ProjectController as project",
-      authenticate: false
+      // authenticate: false
     })
 
     .state('admin', {
-      url: '/new',
+      url: '/admin',
       templateUrl: './views/admin.html',
       controller: "AdminController as admin",
-      authenticate: true
+      // authenticate: true
     });
 
     //Send 'em to the login page if the url is not found
-    $urlRouterProvider.otherwise("/login");
+    // $urlRouterProvider.otherwise("/login");
 };
 
-angular.module("gec").run(function($rootScope, $state, AuthService) {
-  $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams) {
-    if(toState.authenticate && !AuthService.isLoggedIn()) {
-      //User isn't authenticated
-      $state.transitionTo("login");
-      event.preventDefault();
-    }
-  });
-});
+// angular.module("gec").run(function($rootScope, $state, AuthService) {
+//   $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams) {
+//     if(toState.authenticate && !AuthService.isLoggedIn()) {
+//       //User isn't authenticated
+//       $state.transitionTo("login");
+//       event.preventDefault();
+//     }
+//   });
+// });
 
