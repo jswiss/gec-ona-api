@@ -1,5 +1,6 @@
 const express    = require('express');
 const app        = express();
+const server     = require('http').createServer(app);
 const cors       = require('cors');
 const path       = require('path');
 const request    = require('ajax-request');
@@ -7,6 +8,7 @@ const bodyParser = require('body-parser');
 const bunyan     = require('bunyan');
 const mongoose   = require('mongoose');
 const logger     = require('morgan');
+const io         = require('socket.io')(server);
 const configDB   = require('./config/database')
 const routes     = require('./config/routes');
 //seed data already sent in.
