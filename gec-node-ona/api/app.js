@@ -54,5 +54,9 @@ app.listen(port, function() {
     console.log('server has been started on port %s', port);
 });
 
-module.exports = app;
+module.exports = {
+  app: app,
+  server: server,
+  io: io
+}
 
