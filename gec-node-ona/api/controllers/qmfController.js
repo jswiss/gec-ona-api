@@ -2,11 +2,11 @@ const request = require('ajax-request');
 const url     = 'https://api.ona.io/api/v1/data/138570';
 
 
-function getOna() {
+const getOna = (req, res) => {
 
 }
 
-function getQuarter(req, res){
+const getQuarter = (req, res) => {
 
   if(req.params.quarter) {
 

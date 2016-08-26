@@ -3,6 +3,7 @@ const router         = express.Router();
 const bodyParser     = require('body-parser');
 const qmfController  = require('../controllers/qmfController');
 const dataController = require('../controllers/dataController');
+const feedController = require('../controllers/feedController');
 
 router.route('/')
   .get(dataController.getHome);
