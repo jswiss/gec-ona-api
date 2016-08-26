@@ -1,18 +1,27 @@
+.row {
+  height: 98%;
+}
+
 div {
   border: 1px solid red;
 }
 
 #left {
-  overflow: scroll;
+  float: left;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
 }
 
 #right {
-  overflow: scroll;
+  float: right;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
 }
 
 #map-box {
   text-align: center;
-  overflow: hidden;
 }
 
 #placeholder-map {
