@@ -1,0 +1,20 @@
+div {
+  border: 1px solid red;
+}
+
+#left {
+  overflow: scroll;
+}
+
+#right {
+  overflow: scroll;
+}
+
+#map-box {
+  text-align: center;
+  overflow: hidden;
+}
+
+#placeholder-map {
+  width: inherit;
+}
