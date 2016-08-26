@@ -14,17 +14,31 @@ function GecRouter($stateProvider, $urlRouterProvider) {
       // authenticate: false
     })
 
-    // .state('login', {
-    //   url: '/login',
-    //   templateUrl: './views/login.html',
-    //   controller: "LoginController as login",
-    //   // authenticate: false
-    // })
+    .state('login', {
+      url: '/login',
+      templateUrl: './views/login.html',
+      controller: "LoginController as login",
+      // authenticate: false
+    })
 
-    .state('main', {
+    .state('home', {
       url: '/',
       templateUrl: './views/main.html',
       controller: "MainController as main",
+      // authenticate: false
+    })
+
+    .state('home.schools', {
+     url: '/schools',
+      templateUrl: './views/schools.html',
+      controller: "SchoolsController as schools",
+      // authenticate: false
+    })
+
+    .state('home.schools.school', {
+      url: '/schools/:schoolId',
+      templateUrl: './views/school.html',
+      controller: "SchoolController as school",
       // authenticate: false
     })
 
@@ -49,36 +63,57 @@ function GecRouter($stateProvider, $urlRouterProvider) {
     //   authenticate: false
     // })
 
-    .state('country', {
+    .state('home.country', {
       url: '/country/:countryId',
       templateUrl: './views/country.html',
       controller: "CountryController as country",
       // authenticate: false
     })
 
-    // .state('projects', {
-    //   url: '/new',
-    //   templateUrl: './views/projects.html',
-    //   controller: "ProjectsController as projects",
-    //   // authenticate: false
-    // })
+    .state('home.country.schools', {
+     url: 'country/:countryID/schools',
+      templateUrl: './views/schools.html',
+      controller: "SchoolsController as schools",
+      // authenticate: false
+    })
 
-    .state('project', {
-      url: '/country/:projectId',
+    .state('home.country.schools.school', {
+      url: '/country/:countryIDschools/:schoolId',
+      templateUrl: './views/school.html',
+      controller: "SchoolController as school",
+      // authenticate: false
+    })
+
+    .state('home.country.project', {
+      url: '/:countryId/:projectId',
       templateUrl: './views/project.html',
       controller: "ProjectController as project",
       // authenticate: false
     })
 
-    .state('admin', {
-      url: '/admin',
+    .state('home.country.project.schools', {
+      url: '/:countryId/:projectId/schools',
+      templateUrl: './views/schools.html',
+      controller: "SchoolsController as schools",
+      // authenticate: false
+    })
+
+    .state('home.country.project.schools.school', {
+      url: ':countryId/:projectId/schools/:schoolId',
+      templateUrl: './views/school.html',
+      controller: "SchoolController as school",
+      // authenticate: false
+    })
+
+    .state('home.country.project.admin', {
+      url: '/:countryId/:projectId/admin',
       templateUrl: './views/admin.html',
       controller: "AdminController as admin",
       // authenticate: true
     });
 
     //Send 'em to the login page if the url is not found
-    // $urlRouterProvider.otherwise("/login");
+    $urlRouterProvider.otherwise("/login");
 };
 
 // angular.module("gec").run(function($rootScope, $state, AuthService) {
