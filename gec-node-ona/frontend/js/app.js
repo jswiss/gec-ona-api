@@ -105,12 +105,26 @@ function GecRouter($stateProvider, $urlRouterProvider) {
       // authenticate: false
     })
 
-    .state('home.country.project.admin', {
-      url: '/:countryId/:projectId/admin',
+    .state('admin', {
+      url: '/admin',
       templateUrl: './views/admin.html',
       controller: "AdminController as admin",
       // authenticate: true
-    });
+    })
+
+    .state('admin.outcomes', {
+      url: '/admin/outcomes',
+      templateUrl: './views/outcomes.html',
+      controller: "AdminController as admin",
+      // authenticate: true
+    })
+
+    .state('admin.milestones', {
+      url: '/admin/milestones',
+      templateUrl: './views/milestones.html',
+      controller: "AdminController as admin",
+      // authenticate: true
+    })
 
     //Send 'em to the login page if the url is not found
     $urlRouterProvider.otherwise("/login");
