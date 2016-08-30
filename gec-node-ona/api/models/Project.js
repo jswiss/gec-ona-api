@@ -6,25 +6,6 @@ const ProjectSchema = new mongoose.Schema({
   leadOrg: {type: String, required: true, trim: true},
   partnerOrgs: [{type: String, required: true, trim: true}],
   country: {type: String, required: true, trim: true},
-  assumptions: {type: String, trim: true},
-  mgmtInfo: [
-        {
-          indicator: {type: String, required: true, trim: true},
-          definition: [
-            {
-              beneficiaryCategory: {type: String, trim: true}
-            }
-          ],
-          question: {type: String, required: true, trim: true},
-          activity: [
-            {
-              quarter: {type: String, required: true, trim: true},
-              achieve: {type: Number, required: true, trim: true},
-              commentary: {type: String, required: true, trim: true}
-            }
-          ]
-        }
-      ],
   outputs: [{
     number: {type: String, required: true, trim: true},
     desc: {type: String, required: true, trim: true},
@@ -33,6 +14,24 @@ const ProjectSchema = new mongoose.Schema({
       desc: {type: String, required: true, trim: true},
       source: {type: String, trim: true},
       dataDisaggregation: {type: String, trim: true},
+      milestones: [{
+        quarter: {type: String, required: true, trim: true},
+        desc: {type: String, required: true, trim: true},
+        projectStatus: {type: String, enum:['Exceeded', 'Fully met', '90% met', 'Decision to postpone', 'Delayed/Missed', 'No longer applicable'], trim: true},
+        plannedCompletionDate: {type: Date},
+        actualCompletionDate: {type: Date},
+        narrative: {type: String, trim: true},
+        milestoneVerification: [{
+          monitored: {type: String, enum:['yes', 'no'], trim: true},
+          cfmComments: {type: String, trim: true},
+          cfmVerificationMeans: {type: String, trim: true},
+          cemComments: {type: String, trim: true},
+          cemIndicationQuality: {type: String, trim: true},
+          cemVerificationMeans: {type: String, trim: true},
+          cemStatus: {type: String, enum:['Exceeded', 'Fully met', '90% met', 'Decision to postpone', 'Delayed/Missed', 'No longer applicable'], trim: true},
+          agree: {type: String, enum: ['Agree', 'Disagree']}
+        }]
+      }],
       baseline: [
         {
           year: {type: Number, trim: true, max: 2019, min: 2014},
@@ -48,17 +47,6 @@ const ProjectSchema = new mongoose.Schema({
           comment: {type: String, trim: true}
         }
       ],
-      milestones: [{
-        quarter: {type: String, required: true, trim: true},
-        desc: {type: String, required: true, trim: true},
-        projectStatus: {type: String, enum:['Exceeded', 'Fully met', '90% met', 'Decision to postpone', 'Delayed/Missed', 'No longer applicable'], trim: true},
-        plannedCompletionDate: {type: Date},
-        actualCompletionDate: {type: Date},
-        narrative: {type: String, trim: true},
-        //need to add in-country milestone verification stuff here
-        cemStatus: {type: String, enum:['Exceeded', 'Fully met', '90% met', 'Decision to postpone', 'Delayed/Missed', 'No longer applicable'], trim: true},
-        agree: {type: String, enum: ['Agree', 'Disagree']}
-      }]
     }]
   }],
   timestamps: {type: Date}

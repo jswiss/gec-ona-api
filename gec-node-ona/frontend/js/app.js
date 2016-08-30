@@ -14,12 +14,12 @@ function GecRouter($stateProvider, $urlRouterProvider) {
       // authenticate: false
     })
 
-    .state('login', {
-      url: '/login',
-      templateUrl: './views/login.html',
-      controller: "LoginController as login",
-      // authenticate: false
-    })
+    // .state('login', {
+    //   url: '/login',
+    //   templateUrl: './views/login.html',
+    //   controller: "LoginController as login",
+    //   // authenticate: false
+    // })
 
     .state('home', {
       url: '/',
@@ -112,14 +112,14 @@ function GecRouter($stateProvider, $urlRouterProvider) {
       // authenticate: true
     })
 
-    .state('admin.outcomes', {
+    .state('outcomes', {
       url: '/admin/outcomes',
       templateUrl: './views/outcomes.html',
       controller: "AdminController as admin",
       // authenticate: true
     })
 
-    .state('admin.milestones', {
+    .state('milestones', {
       url: '/admin/milestones',
       templateUrl: './views/milestones.html',
       controller: "AdminController as admin",
@@ -127,7 +127,7 @@ function GecRouter($stateProvider, $urlRouterProvider) {
     })
 
     //Send 'em to the login page if the url is not found
-    $urlRouterProvider.otherwise("/login");
+    $urlRouterProvider.otherwise("/");
 };
 
 // angular.module("gec").run(function($rootScope, $state, AuthService) {
