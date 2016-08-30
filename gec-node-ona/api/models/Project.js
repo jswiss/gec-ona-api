@@ -14,6 +14,11 @@ const ProjectSchema = new mongoose.Schema({
       desc: {type: String, required: true, trim: true},
       source: {type: String, trim: true},
       dataDisaggregation: {type: String, trim: true},
+      progress: [{
+        date: {type: Date},
+        overview: {type: String, trim: true},
+        RAG: {type: String, enum: ['red', 'amber', 'green']}
+      }],
       milestones: [{
         quarter: {type: String, required: true, trim: true},
         desc: {type: String, required: true, trim: true},
