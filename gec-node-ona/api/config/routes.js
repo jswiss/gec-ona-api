@@ -21,11 +21,11 @@ router.route('/projects/:projectNumber/admin')
 router.route('/schools')
   .get(dataController.getSchools);
 
-router.route('/schools/:country')
+router.route('/schools/country/:country')
   .get(dataController.getCountrySchools);
 
-// router.route('/schools/:projectCode')
-//   .get(dataController.getProjectSchools);
+router.route('/schools/project/:projectNumber')
+  .get(dataController.getProjectSchools);
 
 router.route('/schools/:schoolCode')
   .get(dataController.getSchool)

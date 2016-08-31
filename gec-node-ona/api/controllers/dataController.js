@@ -32,7 +32,18 @@ const getCountrySchools = (req, res) => {
   School.find({ country: country }, (error, countrySchools) => {
     if (error) res.json({ message: 'this country could not be found because ' + error });
 
-    res.json({ country: countrySchools });
+    res.json({ countrySchools: countrySchools });
+  })
+}
+
+const getProjectSchools = (req, res) => {
+
+  let projectNumber = req.params.projectNumber;
+
+  School.find({ projectNumber: projectNumber }, (error, projectSchools) => {
+    if (error) res.json({ message: 'this country could not be found because ' + error });
+
+    res.json({ projectSchools: projectSchools });
   })
 }
 
@@ -107,6 +118,7 @@ module.exports = {
   getAll: getAll,
   getSchools: getSchools,
   getCountrySchools: getCountrySchools,
+  getProjectSchools: getProjectSchools,
   getSchool: getSchool,
   updateSchool: updateSchool,
   getProject: getProject,
