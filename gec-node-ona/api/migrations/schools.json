@@ -1,0 +1,133 @@
+{
+    "model": "School",
+  "documents": [
+    {
+      "country": "Somalia",
+      "projectName": "Somali Girls' Education Promotion Programme",
+      "projectNcronym": "SOMGEP",
+      "projectNumber": "5274",
+      "name": "Test School",
+      "code": "TSL",
+      "region": "Puntland",
+      "state": "Garoowe",
+      "village": "Gaxaloor",
+      "forms": ["1A", "1B", "2A", "2B", "3A", "4A", "5A", "6A"],
+      "buildingType": "concrete",
+      "yearBuilt": "2004",
+      "schoolType": "primary",
+      "toilets": {
+        "male": 2,
+        "female": 1
+      },
+      "pupils": [
+        {
+          "firstName": "Jim",
+          "lastName": "Jones",
+          "otherNames": "Bobert",
+          "gender": "male",
+          "currentForm": "2A" 
+        },
+        {
+          "firstName": "Lila",
+          "lastName": "Smith",
+          "otherNames": "Jane",
+          "gender": "female",
+          "currentForm": "2B" 
+        },
+        {
+          "firstName": "Ahmed",
+          "lastName": "Mohammed",
+          "otherNames": "Abdirahman",
+          "gender": "male",
+          "currentForm": "6A" 
+        }
+      ]
+    },
+    {
+      "country": "Somalia",
+      "projectName": "Somali Girls' Education Promotion Programme",
+      "projectNcronym": "SOMGEP",
+      "projectNumber": "5274",
+      "name": "Test School Part Deux",
+      "code": "TSD",
+      "region": "Puntland",
+      "state": "Garoowe",
+      "village": "Gaxaloor",
+      "forms": ["1A", "1B", "2A", "2B", "3A", "4A"],
+      "buildingType": "concrete",
+      "yearBuilt": "2014",
+      "schoolType": "secondary",
+      "toilets": {
+        "male": 2,
+        "female": 1
+      },
+      "pupils": [
+        {
+          "firstName": "Jim",
+          "lastName": "Jones",
+          "otherNames": "Bobert",
+          "gender": "male",
+          "currentForm": "2A" 
+        },
+        {
+          "firstName": "Lila",
+          "lastName": "Smith",
+          "otherNames": "Jane",
+          "gender": "female",
+          "currentForm": "2B" 
+        },
+        {
+          "firstName": "Ahmed",
+          "lastName": "Mohammed",
+          "otherNames": "Abdirahman",
+          "gender": "male",
+          "currentForm": "6A" 
+        }
+      ]
+    },
+    {
+      "country": "Somalia",
+      "projectName": "Somali Girls' Education Promotion Programme",
+      "projectNcronym": "EGEP",
+      "projectNumber": "5253",
+      "name": "Yet Another Test School",
+      "code": "YAS",
+      "region": "Puntland",
+      "state": "Garoowe",
+      "village": "Gaxaloor",
+      "forms": ["1A", "1B", "2A", "2B", "3A", "4A", "5A", "6A"],
+      "buildingType": "mud",
+      "yearBuilt": "2012",
+      "schoolType": "primary",
+      "toilets": {
+        "male": 4,
+        "female": 4
+      },
+      "pupils": [
+        {
+          "firstName": "Jim",
+          "lastName": "Jones",
+          "otherNames": "Bobert",
+          "gender": "male",
+          "currentForm": "2A" 
+        },
+        {
+          "firstName": "Lila",
+          "lastName": "Smith",
+          "otherNames": "Jane",
+          "gender": "female",
+          "currentForm": "2B" 
+        },
+        {
+          "firstName": "Ahmed",
+          "lastName": "Mohammed",
+          "otherNames": "Abdirahman",
+          "gender": "male",
+          "currentForm": "6A" 
+        }
+      ]
+    }
+  ]
+}
+
+        
