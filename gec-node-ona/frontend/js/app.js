@@ -1,4 +1,4 @@
-angular.module('gec', ['ui.router'])
+angular.module('gec', ['ui.router', 'xeditable'])
   .config(GecRouter);
 
 
