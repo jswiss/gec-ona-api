@@ -12,6 +12,6 @@ angular
         }
       });
 
-    //do stuff with country data here
+    //do stuff with project data here
 
   }])
