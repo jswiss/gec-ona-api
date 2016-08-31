@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+// const Project = mongoose.model('Project');
+
 const SchoolSchema = new mongoose.Schema({
   country: {type: String, trim: true},
   projectName: {type: String, trim: true},

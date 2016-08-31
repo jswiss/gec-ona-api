@@ -1,6 +1,6 @@
 const request = require('ajax-request');
-const Project = require('../models/Project');
 const School = require('../models/School');
+const Project = require('../models/Project');
 
 const getAll = (req, res) => {
     Project.find((error, projects) => {

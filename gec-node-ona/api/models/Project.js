@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const School   = mongoose.model('School');
 
 const ProjectSchema = new mongoose.Schema({
   country: {type: String, trim: true},
@@ -8,6 +9,7 @@ const ProjectSchema = new mongoose.Schema({
     projectNumber: {type: String, trim: true},
     leadOrg: {type: String, trim: true},
     partnerOrgs: [{type: String, trim: true}],
+    schools: [ School.schema ],
     outputs: [{
       number: {type: String, trim: true},
       desc: {type: String, trim: true},
@@ -28,6 +30,7 @@ const ProjectSchema = new mongoose.Schema({
           plannedCompletionDate: {type: Date},
           actualCompletionDate: {type: Date},
           narrative: {type: String, trim: true},
+          RAG: {type: String, enum: ['red', 'amber', 'green']},
           milestoneVerification: [{
             monitored: {type: String, enum:['yes', 'no'], trim: true},
             cfmComments: {type: String, trim: true},
