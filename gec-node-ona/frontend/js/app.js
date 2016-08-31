@@ -57,9 +57,23 @@ function GecRouter($stateProvider, $urlRouterProvider) {
     // })
 
     .state('country', {
-      url: '/country/:id',
+      url: '/country/:name',
       templateUrl: './views/country.html',
       controller: "CountryController as country",
+      // authenticate: false
+    })
+
+    .state('schools', {
+      url: '/schools',
+      templateUrl: './views/schools.html',
+      controller: "SchoolsController as schools",
+      // authenticate: false
+    })
+
+    .state('countrySchools', {
+      url: '/country/:countryName/schools',
+      templateUrl: './views/schools.html',
+      controller: "CountrySchoolsController as countrySchools",
       // authenticate: false
     })
 
@@ -70,14 +84,14 @@ function GecRouter($stateProvider, $urlRouterProvider) {
       // authenticate: false
     })
 
-    .state('schools', {
+    .state('projectSchools', {
      url: '/country/:name/projects/:projectNumber/schools',
       templateUrl: './views/schools.html',
-      controller: "SchoolsController as schools",
+      controller: "ProjectSchoolsController as projectSchools",
       // authenticate: false
     })
 
-    .state('schools.school', {
+    .state('school', {
       url: '/country/:name/projects/:projectNumber/schools/:schoolCode',
       templateUrl: './views/school.html',
       controller: "SchoolController as school",

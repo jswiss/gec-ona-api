@@ -1,8 +1,8 @@
 angular
   .module('gec')
-  .controller('SchoolsController', ['$scope', '$http', '$stateParams', function($scope, $http, $stateParams) {
+  .controller('ProjectSchoolsController', ['$scope', '$http', '$stateParams', function($scope, $http, $stateParams) {
     
-    $scope.schoolsGrabber = $http.get("http://localhost:3000/schools/")
+    $scope.ProjectSchoolsGrabber = $http.get("http://localhost:3000/schools/project/" + $stateParams.projectNumber)
       .then(function(res, err) {
         if (err) {
           console.log("ERROR ERROR ERROR ", err);
