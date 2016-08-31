@@ -27,7 +27,7 @@ router.route('/schools/country/:country')
 router.route('/schools/project/:projectNumber')
   .get(dataController.getProjectSchools);
 
-router.route('/schools/:schoolCode')
+router.route('/schools/school/:schoolCode')
   .get(dataController.getSchool)
   .post(dataController.updateSchool);
 

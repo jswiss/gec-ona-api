@@ -91,7 +91,7 @@ const getSchool = (req, res) => {
 
   let schoolCode = req.params.schoolCode;
 
-  School.findOne({}, { projects: { $elemMatch: { schools: { $elemMatch: { 'schoolCode': schoolCode}}}}}, (error, school) => {
+  School.findOne({ code: schoolCode }, (error, school) => {
     if(error) res.json({message: 'Could not find school b/c:' + error});
     console.log(school);
     res.json({school: school});
@@ -102,7 +102,7 @@ const updateSchool = (req, res) => {
 
   let schoolCode = req.params.schoolCode;
 
-  School.findOne({}, { projects: { $elemMatch: { schools: { $elemMatch: { 'schoolCode': schoolCode}}}}}, (error, school) => {
+  School.findOne({ code: schoolCode }, (error, school) => {
 
     if(error) res.json({message: 'Could not find school b/c:' + error});
 
