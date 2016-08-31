@@ -2,79 +2,22 @@
     "model": "Project",
   "documents": [
     {
-    "name": "EGEP",
-    "projectNumber": 5253,
-    "leadOrg": "Relief International",
-    "partnerOrg": "Care International",
-    "country": "Somalia",
-    "mgmtInfo": [
-      {
-        "indicator": "Number of beneficiaries reached",
-        "definition": [
-          {
-            "beneficiaryCategory": "(a) Direct learning beneficiaries (girls) – girls in the intervention group who are specifically expected to achieve learning outcomes in-line with targets (this should be consistent with your Outcomes Spreadsheet)"
-          },
-          {
-            "beneficiaryCategory": "(b) Broader student beneficiaries (girls) – girls who will benefit from the interventions in a less direct way, and therefore may benefit from aspects such as attitudinal change, etc. but not necessarily achieve improvements in learning outcomes"
-          }
-        ],
-        "question": "What is the total number of girl beneficiaries (a + b) that you have reached to date?",
-        "activity": [
-          {
-            "quarter": "Q7",
-            "achieve": 15131,
-            "commentary": "South Central Total: 2,973 (this is the number of girls reached directly with school supply sets. Any benefitting from any other activities have also received a school supply set, hence this is the total number of direct beneficiaries). Puntland Total: 7,1664,021 (benefitted in 12 schools through the supplementary feeding programme – this is the whole female population of the 12 schools. This represents 15% of the Puntland target schools. All subsequent numbers reduced by 15% to account for overlap). 2,550 (3,000 girls received sanitary kits. Reduced by 15% to discount beneficiaries in supplementary feeding schools) 595 (1,399 girls received fee waiver. Reduced by 15% to discount beneficiaries in supplementary feeding schools. Reduced by an additional 50% to account for overlap in girls receiving sanitary kits – girls of a younger age do not receive sanitary kits) All beneficiaries of other activities would overlap with the above numbers, hence have been excluded from the calculation. Somaliland Total: 3,9682,400 (4,000 children benefited from supplementary books. 60% of them were girls) 998 (received sanitary kits) 245 (350 girls benefitted from the equivalent of fee waiver. 105 at the age where they would also have received sanitary kits. 325 (650 girls received school uniforms. Half of these also received the equivalent of fee waiver but not sanitary kits). All beneficiaries of other activities would overlap with the above numbers, hence have been excluded from the calculation."
-          }
-        ]
-      }
-    ],
-    "outputs": [
-      {
-        "number": "Output 1",
-        "desc": "Marginalized girls are supported to enrol and stay in school by their communities, families, schools, and mentors",
-        "indicators": [
-          {
-            "number": "Output Indicator 1.1",
-            "desc": "Percentage of people who think there is enough local support for girls to succeed in school",
-            "source": "Baseline - HH survey, Mid-term, End-Line ",
-            "dataDisaggregation": "Zones",
-            "baseline": [
-              {
-                "year": 2014,
-                "planned": "51% Somaliland, 45% Puntland, 33% South-Central"
-              }
-            ],
-            "targets": [
-              {
-                "year": 2015,
-                "planned": "n/a",
-                "achieved": "n/a",
-                "comment": "This will be measured at midline. In the meantime there is indications of increased support for girls to attend school, evident particularly through the actions of political and religious leaders. For example, in Puntland, Garowe an Imam has started including the need for educating girls in Friday prayer sermons. Additionally, political leaders are encouraging increased support, for example the Puntland Education Minister and Minister of Women have been involved in the enrolment campaign and recording of videos, and the Deputy President of Puntland played a key part in the Day of the African Child events. The Somaliland Minister of Education and first lady have provided support during the recording of girls’ club videos as part of the girls’ enrolment campaign. The first lady of Federal government of Somalia has participated in video messages for the enrolment of girls which was been broadcasted on the Somali national TV. Extensive numbers were reached through the behaviour change campaign activities: - Public service announcement(PSA) were developed and broadcast in 16 radio broadcasts in all the three zones to create awareness; - The project engaged high profile members in the recording of the messages i.e. the first ladies of Somalia Federal, Somaliland and Minister of women in Puntland. - The project took the awareness creation campaigns for girls’ education in international events i.e. the commemoration of day of the African Child and international day of the girl child; - The project also undertook community dialogues and engaged different members of the community including. 1,500 youths and boys, women groups, religious leaders; - Videos by prominent community members promoting girls education were also produced and aired in the popular TV stations in all the three zones."
-              },
-              {
-                "year": 2016,
-                "planned": "54% Somaliland, 48% Puntland, 36% South-Central",
-                "achieved": "SL: 82.8%, PL: 90.0%, SC: 83.3%",
-                "comment": ""
-              },
-              {
-                "year": 2017,
-                "planned": "57% Somaliland, 51% Puntland, 39% South-Central"
-              }
-            ],
-            "milestones": [
-              {
-                "quarter": "Q12",
-                "desc": "SL: 3 Community Dialogues and discussions with Women Groups conducted",
-                "projectStatus": "Fully met",
-                "narrative": "In Q12, three community dialogues were conducted in Maroodi-jeex and Sahil regions. In each dialogue, 15 people from different backgrounds and with different professions - like teachers,  religious groups, parents, CECs and the students were invited to discuss the challenges and apportunitiess for the girls' education. The community dialogues all included representatives from women's groups.",
-                "agree": "Disagree" 
-              }
-            ]
-          }
-        ]
-      }
-    ]
+      "name": "Somali Girls' Education Promotion Programme",
+      "acronym": "SOMGEP",
+      "projectNumber": 5274,
+      "leadOrg": "Care International",
+      "partnerOrg": "ADRA",
+      "country": "Somalia"
+    },
+    {
+      "name": "Educating Girls Eliminating Poverty",
+      "acronym": "EGEP",
+      "projectNumber": 5253,
+      "leadOrg": "Relief International",
+      "partnerOrg": "CISP",
+      "country": "Somalia"
     }
   ]
 }
+
+        

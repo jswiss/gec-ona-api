@@ -1,17 +1,18 @@
 const mongoose = require('mongoose');
 
 const ProjectSchema = new mongoose.Schema({
-  name: {type: String, required: true, trim: true},
-  projectNumber: {type: Number, required: true, trim: true},
-  leadOrg: {type: String, required: true, trim: true},
-  partnerOrgs: [{type: String, required: true, trim: true}],
-  country: {type: String, required: true, trim: true},
+  name: {type: String, trim: true},
+  acronym: {type: String, trim: true},
+  projectNumber: {type: Number, trim: true},
+  leadOrg: {type: String, trim: true},
+  partnerOrgs: [{type: String, trim: true}],
+  country: {type: String, trim: true},
   outputs: [{
-    number: {type: String, required: true, trim: true},
-    desc: {type: String, required: true, trim: true},
+    number: {type: String, trim: true},
+    desc: {type: String, trim: true},
     indicators: [{
-      number: {type: String, required: true, trim: true},
-      desc: {type: String, required: true, trim: true},
+      number: {type: String, trim: true},
+      desc: {type: String, trim: true},
       source: {type: String, trim: true},
       dataDisaggregation: {type: String, trim: true},
       progress: [{
@@ -20,8 +21,8 @@ const ProjectSchema = new mongoose.Schema({
         RAG: {type: String, enum: ['red', 'amber', 'green']}
       }],
       milestones: [{
-        quarter: {type: String, required: true, trim: true},
-        desc: {type: String, required: true, trim: true},
+        quarter: {type: String, trim: true},
+        desc: {type: String, trim: true},
         projectStatus: {type: String, enum:['Exceeded', 'Fully met', '90% met', 'Decision to postpone', 'Delayed/Missed', 'No longer applicable'], trim: true},
         plannedCompletionDate: {type: Date},
         actualCompletionDate: {type: Date},
