@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
 
 const ProjectSchema = new mongoose.Schema({
-  name: {type: String, trim: true},
+  country: {type: String, trim: true},
+  projects: [{
+    name: {type: String, trim: true},
   acronym: {type: String, trim: true},
   projectNumber: {type: Number, trim: true},
   leadOrg: {type: String, trim: true},
   partnerOrgs: [{type: String, trim: true}],
-  country: {type: String, trim: true},
   outputs: [{
     number: {type: String, trim: true},
     desc: {type: String, trim: true},
@@ -56,7 +57,9 @@ const ProjectSchema = new mongoose.Schema({
     }]
   }],
   timestamps: {type: Date}
+  }]
 });
+  
 
 // ProjectSchema.pre('save', function(next) {
 //   now = new Date();
