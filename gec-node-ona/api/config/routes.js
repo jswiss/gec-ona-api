@@ -6,21 +6,21 @@ const dataController = require('../controllers/dataController');
 const feedController = require('../controllers/feedController');
 
 router.route('/')
-  .get(dataController.getHome);
-
-router.route('/projects')
   .get(dataController.getAll);
+
+// router.route('/projects')
+//   .get(dataController.getAll);
 
 router.route('/monitoring/:quarter')
   .get(qmfController.getQuarter);
 
-router.route('/projects')
+router.route('/country/:id/projects')
   .get(dataController.getAll);
 
-router.route('/projects/:id')
+router.route('/country/:id/projects/:id')
   .get(dataController.getProject);
 
-router.route('/projects/:id/admin')
+router.route('/country/:id/projects/:id/admin')
   .get(dataController.getProject)
   .post(dataController.updateProject);
 

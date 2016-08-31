@@ -1,17 +1,20 @@
 const request = require('ajax-request');
 const Project = require('../models/Project');
 
-const getHome = (req, res) => {
-  res.status(200).json({ message: 'Connected!!' });
-};
-
 const getAll = (req, res) => {
-  Project.find(function(error, projects) {
+    Project.find(function(error, projects) {
     if(error) res.json({message: 'Could not find any projects'});
 
     res.json({projects: projects});
-  });
-};
+  });};
+
+// const getAll = (req, res) => {
+//   Project.find(function(error, projects) {
+//     if(error) res.json({message: 'Could not find any projects'});
+
+//     res.json({projects: projects});
+//   });
+// };
 
 const getCountry = (req, res) => {
 
@@ -55,7 +58,7 @@ const updateProject = (req, res) => {
 
 module.exports = {
   getAll: getAll,
-  getHome: getHome,
+  // getHome: getHome,
   getProject: getProject,
   getCountry: getCountry,
   updateProject: updateProject
