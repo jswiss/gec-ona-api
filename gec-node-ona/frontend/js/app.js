@@ -43,7 +43,7 @@ function GecRouter($stateProvider, $urlRouterProvider) {
     })
 
     .state('schools.school', {
-      url: '/schools/:schoolId',
+      url: '/schools/:schoolCode',
       templateUrl: './views/school.html',
       controller: "SchoolController as school",
       // authenticate: false
@@ -78,7 +78,7 @@ function GecRouter($stateProvider, $urlRouterProvider) {
     })
 
     .state('project', {
-      url: '/country/:id/:projectId',
+      url: '/country/:name/projects/:projectNumber',
       templateUrl: './views/project.html',
       controller: "ProjectController as project",
       // authenticate: false

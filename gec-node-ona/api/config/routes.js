@@ -11,16 +11,16 @@ router.route('/')
 // router.route('/projects')
 //   .get(dataController.getAll);
 
-router.route('/monitoring/:quarter')
+router.route('/monitoring/:id')
   .get(qmfController.getQuarter);
 
-router.route('/country/:id/projects')
-  .get(dataController.getAll);
+// router.route('/country/:id/projects')
+//   .get(dataController.getAll);
 
-router.route('/country/:id/projects/:id')
+router.route('/projects/:projectNumber')
   .get(dataController.getProject);
 
-router.route('/country/:id/projects/:id/admin')
+router.route('/projects/:id/admin')
   .get(dataController.getProject)
   .post(dataController.updateProject);
 

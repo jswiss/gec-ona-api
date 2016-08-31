@@ -29,11 +29,13 @@ const getCountry = (req, res) => {
 
 const getProject = (req, res) => {
 
-  let id = req.params.id;
+  // let id = req.params.id;
+  let projectNumber = req.params.projectNumber;
 
-  Project.findOne({projectNumber: id}, (error, project) => {
+  // Project.findOne({ country: id }).elemMatch({projects: { projectNumber: projectNumber }}, (error, project) => {
+  // Project.find({ 'country.projects': { "$elemMatch": { "projectNumber": projectNumber }}}, (error, project) => {
+  Project.findOne({}, {projects: {$elemMatch: {'projectNumber': projectNumber}}}, (error, project) => {
     if(error) res.json({message: 'Could not find project b/c:' + error});
-
     res.json({project: project});
   });
 };
