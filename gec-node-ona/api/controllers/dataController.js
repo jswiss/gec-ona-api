@@ -13,6 +13,17 @@ const getAll = (req, res) => {
   });
 };
 
+const getCountry = (req, res) => {
+
+  let id = req.params.id;
+
+  Project.findOne({country: id}, (error, country) => {
+    if (error) res.json({ message: 'this country could not be found because ' + error });
+
+    res.json({ country: country })
+  })
+}
+
 const getProject = (req, res) => {
 
   let id = req.params.id;
@@ -25,7 +36,7 @@ const getProject = (req, res) => {
 };
 
 const updateProject = (req, res) => {
-  var id = req.params.id;
+  let id = req.params.id;
 
   Project.findById({_id: id}, (error, project) => {
     if(error) res.json({message: 'Could not find project b/c:' + error});
@@ -46,5 +57,6 @@ module.exports = {
   getAll: getAll,
   getHome: getHome,
   getProject: getProject,
+  getCountry: getCountry,
   updateProject: updateProject
 }

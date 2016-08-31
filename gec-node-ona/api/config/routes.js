@@ -24,4 +24,7 @@ router.route('/projects/:id/admin')
   .get(dataController.getProject)
   .post(dataController.updateProject);
 
+router.route('/country/:id')
+  .get(dataController.getCountry);
+
 module.exports = router;

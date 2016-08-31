@@ -28,14 +28,21 @@ function GecRouter($stateProvider, $urlRouterProvider) {
       // authenticate: false
     })
 
-    .state('home.schools', {
+    .state('home.map', {
+     url: '/',
+      templateUrl: './views/map.html',
+      controller: "MapController as map",
+      // authenticate: false
+    })
+
+    .state('schools', {
      url: '/schools',
       templateUrl: './views/schools.html',
       controller: "SchoolsController as schools",
       // authenticate: false
     })
 
-    .state('home.schools.school', {
+    .state('schools.school', {
       url: '/schools/:schoolId',
       templateUrl: './views/school.html',
       controller: "SchoolController as school",
@@ -63,45 +70,17 @@ function GecRouter($stateProvider, $urlRouterProvider) {
     //   authenticate: false
     // })
 
-    .state('home.country', {
-      url: '/country/:countryId',
+    .state('country', {
+      url: '/country/:id',
       templateUrl: './views/country.html',
       controller: "CountryController as country",
       // authenticate: false
     })
 
-    .state('home.country.schools', {
-     url: 'country/:countryID/schools',
-      templateUrl: './views/schools.html',
-      controller: "SchoolsController as schools",
-      // authenticate: false
-    })
-
-    .state('home.country.schools.school', {
-      url: '/country/:countryIDschools/:schoolId',
-      templateUrl: './views/school.html',
-      controller: "SchoolController as school",
-      // authenticate: false
-    })
-
-    .state('home.country.project', {
-      url: '/:countryId/:projectId',
+    .state('project', {
+      url: '/country/:id/:projectId',
       templateUrl: './views/project.html',
       controller: "ProjectController as project",
-      // authenticate: false
-    })
-
-    .state('home.country.project.schools', {
-      url: '/:countryId/:projectId/schools',
-      templateUrl: './views/schools.html',
-      controller: "SchoolsController as schools",
-      // authenticate: false
-    })
-
-    .state('home.country.project.schools.school', {
-      url: ':countryId/:projectId/schools/:schoolId',
-      templateUrl: './views/school.html',
-      controller: "SchoolController as school",
       // authenticate: false
     })
 
