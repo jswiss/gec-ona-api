@@ -23,12 +23,8 @@
 </head>
     <body ng-app="gec">
 
-    <div ng-include="'./views/navbar.html'"></div>
+    <div ng-include="'./components/navbar.html'"></div>
     
-    <div ng-controller="TestController">
-      <a href="#" editable-text="user.name" e-label="User Name">{{ user.name || 'empty' }}</a>
-    </div>
-
     <div class="wrapper" ui-view></div>
 
     <script src="bower_components/angular/angular.min.js"></script>

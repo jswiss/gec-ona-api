@@ -10,7 +10,7 @@ function GecRouter($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('about', {
       url: '/about',
-      templateUrl: '../views/about.html',
+      templateUrl: './components/about.html',
       // authenticate: false
     })
 
@@ -23,98 +23,98 @@ function GecRouter($stateProvider, $urlRouterProvider) {
 
     .state('home', {
       url: '/',
-      templateUrl: './views/main.html',
+      templateUrl: './dash/main.html',
       controller: "MainController as main",
       // authenticate: false
     })
 
     .state('home.map', {
      url: '/',
-      templateUrl: './views/map.html',
+      templateUrl: './dash/map.html',
       controller: "MapController as map",
       // authenticate: false
     })
 
     // .state('logout', {
     //   url: '/login',
-    //   templateUrl: './views/login.html',
+    //   templateUrl: './auth/login.html',
     //   controller: "LogoutController as logout",
     //   // authenticate: false
     // })
 
     // .state('profile', {
     //   url: '/profile/:profileId',
-    //   templateUrl: './views/profile.html',
+    //   templateUrl: './auth/profile.html',
     //   controller: 'ProfileController as profile',
     //   // authenticate: true
     // })
 
     // .state('signup', {
     //   url: '/register',
-    //   templateUrl: './views/register.html',
+    //   templateUrl: './auth/register.html',
     //   controller: "RegisterController as register",
     //   authenticate: false
     // })
 
     .state('country', {
       url: '/country/:name',
-      templateUrl: './views/country.html',
+      templateUrl: './country/country.html',
       controller: "CountryController as country",
       // authenticate: false
     })
 
     .state('schools', {
       url: '/schools',
-      templateUrl: './views/schools.html',
+      templateUrl: './schools/schools.html',
       controller: "SchoolsController as schools",
       // authenticate: false
     })
 
     .state('countrySchools', {
       url: '/country/:countryName/schools',
-      templateUrl: './views/schools.html',
+      templateUrl: './schools/schools.html',
       controller: "CountrySchoolsController as countrySchools",
       // authenticate: false
     })
 
     .state('project', {
       url: '/country/:name/projects/:projectNumber',
-      templateUrl: './views/project.html',
+      templateUrl: './project/project.html',
       controller: "ProjectController as project",
       // authenticate: false
     })
 
     .state('projectSchools', {
      url: '/country/:name/projects/:projectNumber/schools',
-      templateUrl: './views/schools.html',
+      templateUrl: './schools/schools.html',
       controller: "ProjectSchoolsController as projectSchools",
       // authenticate: false
     })
 
     .state('school', {
       url: '/country/:name/projects/:projectNumber/schools/:schoolCode',
-      templateUrl: './views/school.html',
+      templateUrl: './schools/school.html',
       controller: "SchoolController as school",
       // authenticate: false
     })
 
     .state('admin', {
       url: '/country/:name/projects/:projectNumber/admin',
-      templateUrl: './views/admin.html',
+      templateUrl: './admin/admin.html',
       controller: "AdminController as admin",
       // authenticate: true
     })
 
     .state('outcomes', {
       url: '/country/:name/projects/:projectNumber/admin/outcomes',
-      templateUrl: './views/outcomes.html',
+      templateUrl: './admin/outcomes.html',
       controller: "AdminController as admin",
       // authenticate: true
     })
 
     .state('milestones', {
       url: '/admin/milestones',
-      templateUrl: './views/milestones.html',
+      templateUrl: './admin/milestones.html',
       controller: "AdminController as admin",
       // authenticate: true
     })
