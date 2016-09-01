@@ -35,20 +35,6 @@ function GecRouter($stateProvider, $urlRouterProvider) {
       // authenticate: false
     })
 
-    .state('schools', {
-     url: '/schools',
-      templateUrl: './views/schools.html',
-      controller: "SchoolsController as schools",
-      // authenticate: false
-    })
-
-    .state('schools.school', {
-      url: '/schools/:schoolCode',
-      templateUrl: './views/school.html',
-      controller: "SchoolController as school",
-      // authenticate: false
-    })
-
     // .state('logout', {
     //   url: '/login',
     //   templateUrl: './views/login.html',
@@ -84,15 +70,29 @@ function GecRouter($stateProvider, $urlRouterProvider) {
       // authenticate: false
     })
 
+    .state('schools', {
+     url: '/country/:name/projects/:projectNumber/schools',
+      templateUrl: './views/schools.html',
+      controller: "SchoolsController as schools",
+      // authenticate: false
+    })
+
+    .state('schools.school', {
+      url: '/country/:name/projects/:projectNumber/schools/:schoolCode',
+      templateUrl: './views/school.html',
+      controller: "SchoolController as school",
+      // authenticate: false
+    })
+
     .state('admin', {
-      url: '/admin',
+      url: '/country/:name/projects/:projectNumber/admin',
       templateUrl: './views/admin.html',
       controller: "AdminController as admin",
       // authenticate: true
     })
 
     .state('outcomes', {
-      url: '/admin/outcomes',
+      url: '/country/:name/projects/:projectNumber/admin/outcomes',
       templateUrl: './views/outcomes.html',
       controller: "AdminController as admin",
       // authenticate: true
