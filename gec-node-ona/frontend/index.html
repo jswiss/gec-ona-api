@@ -24,6 +24,10 @@
     <body ng-app="gec">
 
     <div ng-include="'./views/navbar.html'"></div>
+    
+    <div ng-controller="TestController">
+      <a href="#" editable-text="user.name" e-label="User Name">{{ user.name || 'empty' }}</a>
+    </div>
 
     <div class="wrapper" ui-view></div>
 
@@ -33,21 +37,21 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
     <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>    
-    <script src="./js/app.js"></script>
-    <script src="./js/AdminController.js"></script>
-    <script src="./js/CountryController.js"></script>
-    <script src="./js/LoginController.js"></script>
-    <script src="./js/LogoutController.js"></script>
-    <script src="./js/ProfileController.js"></script>
-    <script src="./js/MainController.js"></script>
-    <script src="./js/ProjectController.js"></script>
-    <script src="./js/FeedController.js"></script>
-    <script src="./js/MapController.js"></script>
-    <script src="./js/CountrySchoolsController.js"></script>
-    <script src="./js/ProjectSchoolsController.js"></script>
-    <script src="./js/SchoolsController.js"></script>
-    <script src="./js/SchoolController.js"></script>
-    <script src="./js/NavbarController.js"></script>
+    <script src="./app.js"></script>
+    <script src="./admin/AdminController.js"></script>
+    <script src="./country/CountryController.js"></script>
+    <script src="./auth/LoginController.js"></script>
+    <script src="./auth/LogoutController.js"></script>
+    <script src="./auth/ProfileController.js"></script>
+    <script src="./dash/MainController.js"></script>
+    <script src="./project/ProjectController.js"></script>
+    <script src="./feed/FeedController.js"></script>
+    <script src="./dash/MapController.js"></script>
+    <script src="./schools/CountrySchoolsController.js"></script>
+    <script src="./schools/ProjectSchoolsController.js"></script>
+    <script src="./schools/SchoolsController.js"></script>
+    <script src="./schools/SchoolController.js"></script>
+    <script src="./components/NavbarController.js"></script>
 
 </body>
 </html>
