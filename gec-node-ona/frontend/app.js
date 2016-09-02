@@ -72,7 +72,7 @@ function GecRouter($stateProvider, $urlRouterProvider) {
 
     .state('countrySchools', {
       url: '/country/:countryName/schools',
-      templateUrl: './schools/schools.html',
+      templateUrl: './schools/countrySchools.html',
       controller: "CountrySchoolsController as countrySchools",
       // authenticate: false
     })
@@ -86,7 +86,7 @@ function GecRouter($stateProvider, $urlRouterProvider) {
 
     .state('projectSchools', {
      url: '/country/:name/projects/:projectNumber/schools',
-      templateUrl: './schools/schools.html',
+      templateUrl: './schools/projectSchools.html',
       controller: "ProjectSchoolsController as projectSchools",
       // authenticate: false
     })
@@ -98,14 +98,14 @@ function GecRouter($stateProvider, $urlRouterProvider) {
       // authenticate: false
     })
 
-    .state('school', {
+    .state('form', {
       url: '/country/:name/projects/:projectNumber/schools/:schoolCode/:form',
-      templateUrl: './schools/school.html',
+      templateUrl: './schools/form.html',
       controller: "FormController as form",
       // authenticate: false
     })
 
-    .state('school', {
+    .state('pupil', {
       url: '/country/:name/projects/:projectNumber/schools/:schoolCode/:pupil',
       templateUrl: './pupils/pupil.html',
       controller: "PupilController as pupil",

@@ -1,0 +1,24 @@
+  
+<div class="container">
+  <table class="bordered striped highlight responsive-table">
+    <thead>
+      <tr>
+        <th data-field="id">School Name</th>
+        <th data-field="name">School Code</th>
+        <th data-field="price">School Type</th>
+        <th data-field="price">Forms</th>
+        <th data-field="price">Enrolment</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="data in projectSchools.all">
+        <td>{{ data.name }}</td>
+        <td>{{ data.code }}</td>
+        <td>{{ data.type }}</td>
+        <td>{{ data.forms.join(", ") }}</td>
+        <td>{{ (data.pupils).length }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
