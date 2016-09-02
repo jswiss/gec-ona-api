@@ -98,6 +98,20 @@ function GecRouter($stateProvider, $urlRouterProvider) {
       // authenticate: false
     })
 
+    .state('school', {
+      url: '/country/:name/projects/:projectNumber/schools/:schoolCode/:form',
+      templateUrl: './schools/school.html',
+      controller: "FormController as form",
+      // authenticate: false
+    })
+
+    .state('school', {
+      url: '/country/:name/projects/:projectNumber/schools/:schoolCode/:pupil',
+      templateUrl: './pupils/pupil.html',
+      controller: "PupilController as pupil",
+      // authenticate: false
+    })
+
     .state('admin', {
       url: '/country/:name/projects/:projectNumber/admin',
       templateUrl: './admin/admin.html',
