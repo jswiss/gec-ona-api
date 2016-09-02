@@ -12,6 +12,7 @@
         <th data-field="price">Total Enrolment</th>
         <th data-field="price">Male</th>
         <th data-field="price">Female</th>
+        <th data-field="price">Edit</th>
       </tr>
     </thead>
 
@@ -23,6 +24,7 @@
         <td>{{ data.forms.join(", ") }}</td>
         <td>{{ (data.pupils).length }}</td>
         <td>{{ (data.pupils | filter: { gender: 'male' } : true).length }}</td>
+        <td>{{ (data.pupils | filter: { gender: 'female' } : true).length }}</td>
         <td>{{ (data.pupils | filter: { gender: 'female' } : true).length }}</td>
       </tr>
     </tbody>
