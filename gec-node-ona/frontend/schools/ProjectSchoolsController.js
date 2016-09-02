@@ -13,10 +13,13 @@ angular
           self.collection = [].concat(self.all);
           console.log(self.collection);
           console.log(self.all);
+          $scope.projectName = self.all[0].projectName;
+          console.log($scope.projectName);
         })
     }
 
     ProjectSchoolsGrabber();
+
     // $scope.ProjectSchoolsGrabber = $http.get("http://localhost:3000/schools/project/" + $stateParams.projectNumber)
     //   .then(function(res, err) {
     //     if (err) {
