@@ -11,8 +11,8 @@ angular
 
       // this.schools  = schools.data;
 
-      console.log('projects!', this.projects)
-      console.log('schools! ', this.schools)
+      // console.log('projects!', this.projects)
+      // console.log('schools! ', this.schools)
 
 
   }])

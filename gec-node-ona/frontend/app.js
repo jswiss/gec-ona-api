@@ -10,7 +10,7 @@ function GecRouter($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('about', {
       url: '/about',
-      templateUrl: './components/about.html',
+      templateUrl: './static/about.html',
       // authenticate: false
     })
 

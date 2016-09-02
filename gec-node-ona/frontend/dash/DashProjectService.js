@@ -5,5 +5,4 @@ angular
     this.getProjects = function(query) {
       return $http.get('http://localhost:3000/')
     }
-    console.log('hello!')
   }])

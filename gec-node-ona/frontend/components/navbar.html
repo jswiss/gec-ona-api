@@ -1,7 +1,12 @@
-  <!-- Country Dropdown Structure -->
-  <ul id="country-dropdown" class="dropdown-content">
-    <!-- <li><a ui-sref=""></a></li> -->
+<div>
+    <!-- Country Dropdown Structure -->
+  <ul id="country-dropdown" class="dropdown-content" ng-controller="NavbarController as navbar">
+    <li ng-repeat="data in navbar.all.projects"><a ng-href="http://localhost:9000/#/country/{{ data.country }}"></a>{{ data.country }}</li>
   </ul>
+ 
+<!--   <ul id="project-dropdown" class="dropdown-content" ng-controller="ProjectController as project">
+      <li ng-repeat="data in project.projects"><a ui-sref="#!"></a>{{ data.acronym }}</li>
+  </ul> -->
 
   <nav>
     <div class="nav-wrapper">
@@ -10,8 +15,9 @@
       <!-- <a ng-hide="userSignedIn" ui-sref="login" class="brand-logo right">Logo</a> -->
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a ui-sref-active="active" ui-sref="home"><i class="large material-icons">dashboard</i></a></li>
-        <li><a href="badges.html">Country</a></li>
-        <li><a href="collapsible.html">Project</a></li>
+        <li><a href="#!" class="dropdown-button" data-activates="country-dropdown">Country</a></li>
+        <!-- <li><a href="#!" class="dropdown-button" data-activates="project-dropdown">Project</a></li> -->
       </ul>
     </div>
   </nav>
+</div>
