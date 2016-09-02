@@ -15,6 +15,8 @@ const SchoolSchema = new mongoose.Schema({
   district: {type: String, trim: true},
   city: {type: String, trim: true},
   village: {type: String, trim: true},
+  lat: {type: Number, trim: true},
+  lng: {type: Number, trim: true},
   forms: [{type: String, trim: true}],
   buildingType: {type: String, trim: true},
   yearBuilt: {type: String, trim: true},
