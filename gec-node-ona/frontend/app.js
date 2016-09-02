@@ -23,6 +23,18 @@ function GecRouter($stateProvider, $urlRouterProvider) {
 
     .state('home', {
       url: '/',
+      resolve: {
+        projects: [
+          'DashProjectService', function(DashProjectService) {
+            return DashProjectService.getProjects();
+          }
+        ]
+        // schools: [
+        //   'DashSchoolService', function(DashSchoolService) {
+        //     return DashSchoolService.getSchools();
+        //   }
+        // ]
+      },
       templateUrl: './dash/main.html',
       controller: "MainController as main",
       // authenticate: false
