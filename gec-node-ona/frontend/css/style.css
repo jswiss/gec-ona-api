@@ -2,10 +2,6 @@
   height: 98%;
 }
 
-div {
-  border: 1px solid red;
-}
-
 #left {
   float: left;
   width: 50%;
