@@ -10,13 +10,13 @@
   </div>
   <div class="col s12 l6 grey lighten-2" id="right" ng-controller="FeedController as feed">
     <h2 class="feed-title">Feed</h2>
-    <div class="card z-depth-1 grey lighten-4" ng-repeat="data in feed.all.results | orderBy: '-releaseDate'">
+    <div class="card z-depth-1 grey lighten-4" ng-repeat="data in feed.all.results | orderBy: '-releaseDate' | limitTo: 5 track by data.trackId">
       <div class="card-image z-depth-1 grey lighten-4">
-        <img ng-src="{{ data.artworkUrl100 }}" class="posters-image" alt="">{{ data.collectionArtistName }}
+        <img ng-src="{{ data.artworkUrl60 }}" class="posters-image" alt="">{{ data.collectionArtistName }}
       </div>
       <div class="card-content z-depth-1 grey lighten-4">
         <div class="chip">
-          <img ng-src="{{ data.artworkUrl30 }}" class="poster" alt="">{{ data.collectionAdvisoryRating }}
+          <img ng-src="{{ data.artworkUrl30 }}" class="poster" alt="">{{ data.trackName }}
         </div>
         <p class="date-time">{{ data.releaseDate | date: 'dd/MM/yyyy hh:mm a' }}</p>
         <p class="message">{{ data.artistName }}</p>

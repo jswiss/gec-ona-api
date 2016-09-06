@@ -12,7 +12,7 @@ angular
           self.all = response.data;
           self.collection = [].concat(self.all);
           // console.log(self.collection);
-          // console.log(self.all);
+          console.log(self.all);
           // console.log($scope);
         })
     }
