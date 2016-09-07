@@ -10,7 +10,7 @@
   </div> 
   <div class="col s12 l6 grey lighten-2" id="right" ng-controller="FeedController as feed" infinite-scroll="getMoreData()">
     <div infinite-scroll="getMoreData()">
-      <div class="card z-depth-1 grey lighten-4" ng-repeat="item in data | orderBy: '-releaseDate' track by item.trackId"">
+      <div class="card z-depth-1 grey lighten-4" ng-repeat="item in data track by item.trackId"">
         <div class="card-image z-depth-1 grey lighten-4">
           <img ng-src="{{ item.artworkUrl60 }}" class="posters-image" alt="">{{ item.collectionArtistName }}
         </div>

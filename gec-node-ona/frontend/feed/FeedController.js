@@ -8,13 +8,13 @@ angular
 
       function FeedGrabber() {
       $http
-        .get("https://itunes.apple.com/search?term=hip+hop&country=us")
+        .get("https://itunes.apple.com/search?term=hip+hop&country=us", {cache: true})
         .then(function(response) {
           self.all = response.data;
           console.log(self.all);
 
           var sorted = self.all.results.sort(function(a,b) {
-            return b.releaseDate - a.releaseDate
+            return b.artistId - a.artistId
           });
 
           console.log('sorted: ', sorted)
