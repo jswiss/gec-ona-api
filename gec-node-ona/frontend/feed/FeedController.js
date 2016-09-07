@@ -13,10 +13,18 @@ angular
           self.all = response.data;
           console.log(self.all);
 
-          $scope.data = self.all.results.slice(0,5);
+          var sorted = self.all.results.sort(function(a,b) {
+            return b.releaseDate - a.releaseDate
+          });
+
+          console.log('sorted: ', sorted)
+
+          // $scope.data = self.all.results.slice(0,5);
+          $scope.data = sorted.slice(0,5);
           console.log($scope.data);
           $scope.getMoreData = function() {
-            $scope.data = self.all.results.slice(0, $scope.data.length + 5);
+            // $scope.data = self.all.results.slice(0, $scope.data.length + 5);
+            $scope.data = sorted.slice(0, $scope.data.length + 5);
             console.log('hitting it')
           }
         })
