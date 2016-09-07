@@ -4,28 +4,23 @@ angular
     
     var self = this;
     self.all = [];
-    self.all.limit = 5;
+    // var all = self.all.results;
 
       function FeedGrabber() {
       $http
         .get("https://itunes.apple.com/search?term=hip+hop&country=us")
         .then(function(response) {
           self.all = response.data;
-          console.log(self);
-          // console.log($scope);
+          console.log(self.all);
 
+          $scope.data = self.all.results.slice(0,5);
+          console.log($scope.data);
+          $scope.getMoreData = function() {
+            $scope.data = self.all.results.slice(0, $scope.data.length + 5);
+            console.log('hitting it')
+          }
         })
     }
     FeedGrabber();
-
-    $scope.loadMore = function() {
-      var incremented = self.all.limit + 5;
-      console.log('load')
-      self.limit = incremented > self.all.results.length ? self.all.results.length : incremented;
-    }
-
-
-
-
 
   }])

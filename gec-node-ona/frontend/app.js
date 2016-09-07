@@ -1,4 +1,4 @@
-angular.module('gec', ['ui.router', 'xeditable'])
+angular.module('gec', ['ui.router', 'xeditable', 'infinite-scroll'])
   .config(GecRouter);
 
 
