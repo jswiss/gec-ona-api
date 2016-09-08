@@ -11,10 +11,10 @@ angular
         .then(function(response) {
           self.all = response.data.projectSchools;
           self.collection = [].concat(self.all);
-          console.log(self.collection);
-          console.log(self.all);
+          // console.log(self.collection);
+          // console.log(self.all);
           $scope.projectName = self.all[0].projectName;
-          console.log($scope.projectName);
+          // console.log($scope.projectName);
         })
     }
 
