@@ -1,4 +1,4 @@
-angular.module('gec', ['ui.router', 'xeditable', 'infinite-scroll'])
+angular.module('gec', ['ui.router', 'xeditable', 'infinite-scroll', 'uiGmapgoogle-maps'])
   .config(GecRouter);
 
 
@@ -40,12 +40,12 @@ function GecRouter($stateProvider, $urlRouterProvider) {
       // authenticate: false
     })
 
-    .state('home.map', {
-     url: '/',
-      templateUrl: './dash/map.html',
-      controller: "MapController as map",
-      // authenticate: false
-    })
+    // .state('home.map', {
+    //  url: '/',
+    //   templateUrl: './dash/map.html',
+    //   controller: "MapController as map",
+    //   // authenticate: false
+    // })
 
     // .state('logout', {
     //   url: '/login',

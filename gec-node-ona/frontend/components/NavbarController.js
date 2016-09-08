@@ -12,8 +12,8 @@ angular
           self.all = response.data;
           self.collection = [].concat(self.all);
           // console.log(self.collection);
-          console.log('Navbar data ', self.all);
-          console.log('Navbar data ', self.all.projects[0].country);
+          // console.log('Navbar data ', self.all);
+          // console.log('Navbar data ', self.all.projects[0].country);
         })
     }
 

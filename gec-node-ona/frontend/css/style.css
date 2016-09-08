@@ -2,9 +2,13 @@
   height: 98%;
 }
 
-/*.clear {
-  clear: both;
-}*/
+.angular-google-map-container {
+        height: 400px;
+}
+
+#dash-map {
+  margin-top: 2%;
+}
 
 #left {
   float: left;
