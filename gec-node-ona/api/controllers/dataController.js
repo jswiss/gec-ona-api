@@ -9,7 +9,8 @@ const getAll = (req, res) => {
     if (error) res.json({message: 'Could not find any projects'});
 
     res.json({ projects: projects });
-  });};
+  }).select('-__v');
+};
 
 // const getAll = (req, res) => {
 //   Project.find(function(error, projects) {
