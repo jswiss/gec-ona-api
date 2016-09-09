@@ -12,7 +12,7 @@ const io         = require('socket.io')(server);
 const configDB   = require('./config/database')
 const routes     = require('./config/routes');
 //seed data already sent in.
-const seedDB     = require('./seed');
+// const seedDB     = require('./seed');
 const port       = process.env.PORT || 3000;
 
 mongoose.connect(configDB.url, function(err, db) {
