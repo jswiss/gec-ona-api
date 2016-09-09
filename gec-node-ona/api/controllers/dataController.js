@@ -5,7 +5,7 @@ const Project = require('../models/Project');
 const getAll = (req, res) => {
     Project.find((error, projects) => {
       console.log("hi i'm in the getAll")
-      debugger;
+      // debugger;
     if (error) res.json({message: 'Could not find any projects'});
 
     res.json({ projects: projects });
