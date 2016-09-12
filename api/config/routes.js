@@ -5,7 +5,7 @@ const qmfController  = require('../controllers/qmfController');
 const dataController = require('../controllers/dataController');
 const feedController = require('../controllers/feedController');
 
-router.route('/')
+router.route('/dash')
   .get(dataController.getAll);
 
 router.route('/monitoring/:id')
