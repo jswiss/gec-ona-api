@@ -1,4 +1,11 @@
 angular.module('gec', ['ui.router', 'xeditable', 'infinite-scroll', 'uiGmapgoogle-maps'])
+  .config(function(uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({
+        key: 'AIzaSyCr09bRbYOzEaA0D0EhwMQHFLsVIL0gdw0',
+        v: '3.24', //defaults to latest 3.X anyhow
+        libraries: 'weather,geometry,visualization'
+    });
+})
   .config(GecRouter);
 
 
