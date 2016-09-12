@@ -24,5 +24,8 @@
   },
   "devDependencies": {
     "mongoose-seed-plus": "^0.1.2"
+  },
+  "engines": {
+    "node": "6.2.2"
   }
 }

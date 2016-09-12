@@ -9,8 +9,8 @@ const bodyParser = require('body-parser');
 const mongoose   = require('mongoose');
 const logger     = require('morgan');
 const io         = require('socket.io')(server);
-const configDB   = require('./config/database')
-const routes     = require('./config/routes');
+const configDB   = require('./api/config/database')
+const routes     = require('./api/config/routes');
 //seed data already sent in.
 // const seedDB     = require('./seed');
 const port       = process.env.PORT || 3000;
