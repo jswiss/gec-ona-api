@@ -16,10 +16,11 @@ router.route('/projects/:projectNumber')
 
 router.route('/projects/:projectNumber/admin')
   .get(dataController.getProject)
-  .post(dataController.updateProject);
+  .put(dataController.updateProject);
 
 router.route('/schools')
-  .get(dataController.getSchools);
+  .get(dataController.getSchools)
+  .post(dataController.createSchool);
 
 router.route('/schools/country/:country')
   .get(dataController.getCountrySchools);
@@ -29,7 +30,8 @@ router.route('/schools/project/:projectNumber')
 
 router.route('/schools/school/:schoolCode')
   .get(dataController.getSchool)
-  .post(dataController.updateSchool);
+  .put(dataController.updateSchool)
+  .delete(dataController.deleteSchool);
 
 router.route('/country/:id')
   .get(dataController.getCountry);

@@ -9,6 +9,7 @@ const SchoolSchema = new mongoose.Schema({
   projectNumber: {type: String, trim: true},
   name: {type: String, trim: true},
   code: {type: String, trim: true},
+  createDate: {type: Date, trim: true},
   region: {type: String, trim: true},
   state: {type: String, trim: true},
   county: {type: String, trim: true},
