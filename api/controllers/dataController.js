@@ -21,17 +21,21 @@ const getSchools = (req, res) => {
 }
 
 const createSchool = (req, res) => {
+  console.log('posting');
+  console.log("body: ", req.body);
 
-  let newSchool = req.body;
-  newSchool.createDate = new Date();
-  // let school = new School();
+  let school = new School(req.body);
 
-  newSchool.save = (err) => {
-    if(err)
+  school.save(function(err) {
+    if(err) {
+      console.log(err);
+      res.status(400);
       res.send(err);
- 
-      res.json({ message: 'new school created!' });
-  }
+      } else {
+        res.status(200);
+        res.json({ school });
+      };
+  })
 }
 
 const getSchool = (req, res) => {
